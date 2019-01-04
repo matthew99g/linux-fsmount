@@ -57,7 +57,7 @@ main (const int argc, char *argv[])
 		}
 	}
 
-	if (argc < optind)
+	if ((!pass && argc != optind + 2) || (pass && argc != 3))
 		fatal("Wrong number of arguments");
 
 	if(!pass) {
